@@ -21,16 +21,53 @@
 
 ---
 
-## Study Guide Files
+## Repository Structure
+
+```
+ml/
+├── guide/    ← Study notes per domain + cheatsheet + exam tips
+├── mock/     ← Mock exam questions (20 Q per domain, with answers)
+└── lab/      ← Hands-on lab simulations (6 labs per domain, with code)
+```
+
+---
+
+## 📖 Study Guides — `guide/`
 
 | File | Domain | Key Services |
 |------|--------|-------------|
-| [01 - Data Preparation](./01-data-preparation.md) | Domain 1 (28%) | S3, Glue, Athena, Kinesis, SageMaker Processing, Feature Store |
-| [02 - Model Development](./02-model-development.md) | Domain 2 (26%) | SageMaker Training, Built-in Algorithms, HPO, Experiments |
-| [03 - Deployment & Orchestration](./03-deployment-orchestration.md) | Domain 3 (22%) | SageMaker Endpoints, Pipelines, Step Functions, Model Registry |
-| [04 - Monitoring, Maintenance & Security](./04-monitoring-security.md) | Domain 4 (24%) | SageMaker Model Monitor, CloudWatch, IAM, VPC, Clarify |
-| [05 - AWS Services Cheatsheet](./05-aws-services-cheatsheet.md) | All Domains | Quick reference for all relevant AWS services |
-| [06 - Exam Tips & Practice Questions](./06-exam-tips-practice.md) | All Domains | Strategy, sample questions, and key facts |
+| [01 - Data Preparation](./guide/01-data-preparation.md) | Domain 1 (28%) | S3, Glue, Athena, Kinesis, SageMaker Processing, Feature Store |
+| [02 - Model Development](./guide/02-model-development.md) | Domain 2 (26%) | SageMaker Training, Built-in Algorithms, HPO, Experiments |
+| [03 - Deployment & Orchestration](./guide/03-deployment-orchestration.md) | Domain 3 (22%) | SageMaker Endpoints, Pipelines, Step Functions, Model Registry |
+| [04 - Monitoring, Maintenance & Security](./guide/04-monitoring-security.md) | Domain 4 (24%) | SageMaker Model Monitor, CloudWatch, IAM, VPC, Clarify |
+| [05 - AWS Services Cheatsheet](./guide/05-aws-services-cheatsheet.md) | All Domains | Quick reference for all relevant AWS services |
+| [06 - Exam Tips & Practice Questions](./guide/06-exam-tips-practice.md) | All Domains | Strategy, sample questions, and key facts |
+
+---
+
+## 📝 Mock Exams — `mock/`
+
+20 scenario-based questions per domain, each with detailed explanations.
+
+| File | Domain | Coverage |
+|------|--------|---------|
+| [Domain 1 Mock](./mock/mock-domain1-data-preparation.md) | Data Preparation | FastFile, Feature Store, Glue, Athena, Kinesis, encodings |
+| [Domain 2 Mock](./mock/mock-domain2-model-development.md) | Model Development | XGBoost, HPO, Debugger, JumpStart, distributed training |
+| [Domain 3 Mock](./mock/mock-domain3-deployment-orchestration.md) | Deployment & Orchestration | Inference types, Pipelines, blue/green, MME, EventBridge |
+| [Domain 4 Mock](./mock/mock-domain4-monitoring-security.md) | Monitoring & Security | Model Monitor, Clarify, IAM, VPC, KMS, Model Cards |
+
+---
+
+## 🔬 Lab Practice — `lab/`
+
+6 hands-on labs per domain with working Python/CLI code, step-by-step tasks, and verification checklists.
+
+| File | Domain | Labs Included |
+|------|--------|--------------|
+| [Domain 1 Labs](./lab/lab-domain1-data-preparation.md) | Data Preparation | S3 input modes, Feature Store, Processing Jobs, Glue ETL, Kinesis streaming, Athena queries |
+| [Domain 2 Labs](./lab/lab-domain2-model-development.md) | Model Development | XGBoost training, HPO Bayesian + Warm Start, Experiments, Debugger, JumpStart BERT, distributed DDP |
+| [Domain 3 Labs](./lab/lab-domain3-deployment-orchestration.md) | Deployment & Orchestration | Real-time + auto scaling, Async + Serverless, MME, SageMaker Pipelines, blue/green rollback, EventBridge automation |
+| [Domain 4 Labs](./lab/lab-domain4-monitoring-security.md) | Monitoring & Security | Data Quality Monitor, Clarify bias + SHAP, Model Quality Monitor, IAM + VPC + KMS, Bias Drift, CloudTrail + Model Cards |
 
 ---
 
@@ -114,12 +151,12 @@ ORCHESTRATION (MLOps)
 
 ## Recommended Study Order
 
-1. **Start with Domain 1** – Data prep underpins everything
-2. **Then Domain 2** – SageMaker training and algorithms are heavily tested
-3. **Then Domain 3** – Deployment patterns (know ALL endpoint types)
-4. **Then Domain 4** – Monitoring + security round out the exam
-5. **Review [05 - Cheatsheet](./05-aws-services-cheatsheet.md)** – Services at a glance
-6. **Practice with [06 - Exam Tips](./06-exam-tips-practice.md)** – Key facts and traps
+1. **Read guide/** – Study each domain guide in order (01 → 02 → 03 → 04)
+2. **Do lab/** – Run hands-on labs for each domain to reinforce concepts
+3. **Review [Cheatsheet](./guide/05-aws-services-cheatsheet.md)** – Services at a glance
+4. **Practice with [Exam Tips](./guide/06-exam-tips-practice.md)** – Key facts and traps
+5. **Attempt mock/** – Take each domain mock exam under timed conditions
+6. **Review wrong answers** – Use the guide to revisit any missed topics
 
 ---
 
